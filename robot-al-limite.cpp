@@ -15,9 +15,10 @@ void drawMap(int posX,int posY,char gameMap[10][10]){
     cout<<endl;
   }
 }
-int main(){
-  int posX=0;
-  int posY=0;
+int main()
+{
+  int posX=1;
+  int posY=1;
   char map[10][10]={{'0','0','0','0','0','0','0','0','0','0'},
 		  {'0','0','0','0','0','0','0','0','0','0'},
 		  {'0','0','0','0','0','0','0','0','0','0'},
@@ -40,55 +41,36 @@ int main(){
     switch (teclado)
     {
         case 'a':
+            if(posX!=0)
+            {
             posX-=1;
+            }
             break;
         case 'd':
+            if(posX!=9)
+            {
             posX+=1;
+            }
             break;
         case 'w':
+            if(posY!= 0)
+            {
             posY-=1;
+            }
             break;
         case 's':
+            if(posY!=9)
+            {
             posY+=1;
+            }
             break;
         case 'p':
             gameOver=true;
         default:
             break;
-     }
-
-     /* ciclo utilizado if...else*/
-
-    if (posX > 9){
-        cout << "te vas a caer mijo" << endl;
-        posX = 9;
-         /* derecha*/
-    }
-
-
-    else if (posX < 0){
-        cout << "a donde vas we" << endl;
-        posX = 0;
-        /* izquierda*/
-    }
-
-
-    if (posY > 9){
-        cout << "hagase pa alla" << endl;
-        posY = 9;
-       /* abajo*/
-    }
-
-    else if (posY < 0){
-        cout << "te gusta buscar el peligro veda?" << endl;
-        posY = 0;
-        /* arriba*/
-    }
-
-
-      drawMap(posX,posY,map);
 
       }
+  drawMap(posX,posY,map);
+  }
  return 0;
-
 }
