@@ -44,25 +44,25 @@ int main()
     switch (teclado)
     {
         case 'a':
-            if(posX!=0)
+            if(posX!=1)
             {
             posX-=1;
             }
             break;
         case 'd':
-            if(posX!=9)
+            if(posX!=8)
             {
             posX+=1;
             }
             break;
         case 'w':
-            if(posY!= 0)
+            if(posY!= 1)
             {
             posY-=1;
             }
             break;
         case 's':
-            if(posY!=9)
+            if(posY!=8)
             {
             posY+=1;
             }
